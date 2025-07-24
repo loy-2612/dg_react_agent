@@ -2,9 +2,6 @@
 
 A headless React component designed to drastically simplify the integration of Deepgram's real-time transcription and voice agent capabilities into web applications. It handles the low-level complexities of WebSocket connections, browser microphone access, and agent audio playback, allowing you to focus on building your application's UI and logic.
 
-[![npm version](https://badge.fury.io/js/deepgram-react.svg)](https://badge.fury.io/js/deepgram-react) <!-- Placeholder - update if published -->
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 ## Features
 
 -   **Real-time Transcription:** Streams microphone audio to Deepgram's Speech-to-Text API and provides live results.

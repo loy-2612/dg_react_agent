@@ -252,7 +252,6 @@ function App() {
   
   return (
     <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
-      <h1>Deepgram Voice Interaction Test</h1>
       
       <DeepgramVoiceInteraction
         ref={deepgramRef}
@@ -343,8 +342,8 @@ function App() {
           borderRadius: '8px',
           backgroundColor: '#fff8f8'
         }}>
-          <p style={{ margin: '0 0 10px 0', fontWeight: 'bold' }}>
-            {isPlaying ? '🤖 Agent is speaking' 
+          <p style={{ margin: '0 0 10px 0', fontWeight: 'bold', color: 'black' }}>
+            {isPlaying ? 'Agent is speaking' 
               : agentState === 'listening' ? '👂 Agent listening' 
               : agentState === 'thinking' ? '🤔 Agent thinking' 
               : (agentState === 'sleeping' || agentState === 'entering_sleep') ? '😴 Agent sleeping' 
@@ -360,7 +359,7 @@ function App() {
           <h3>Live Transcript</h3>
           <pre>{lastTranscript || '(Waiting for transcript...)'}</pre>
         </div>
-        <div style={{ flex: 1, border: '1px solid #ccc', padding: '10px' }}>
+        <div style={{ flex: 1, border: '1px solid #ccc', padding: '10px', width: '100%' }}>
           <h3>Agent Response</h3>
           <pre>{agentResponse || '(Waiting for agent response...)'}</pre>
         </div>
@@ -374,7 +373,7 @@ function App() {
       <div style={{ marginTop: '20px', border: '1px solid #eee', padding: '10px' }}>
         <h3>Event Log</h3>
         <button onClick={() => setLogs([])} style={{ marginBottom: '10px' }}>Clear Logs</button>
-        <pre style={{ maxHeight: '300px', overflowY: 'scroll', background: '#f9f9f9', padding: '5px' }}>
+        <pre style={{ maxHeight: '300px', overflowY: 'scroll', background: '#f9f9f9', padding: '5px', color: 'black' }}>
           {logs.join('\n')}
         </pre>
       </div>
