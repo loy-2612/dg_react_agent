@@ -15,6 +15,7 @@ export * from './agent';
 export * from './connection';
 export * from './transcription';
 export * from './voiceBot';
+export * from './voiceConfig';
 
 // Remove the conflicting explicit re-export blocks for types already covered by export *
 /* // REMOVED Block
@@ -135,6 +136,11 @@ export interface DeepgramVoiceInteractionProps {
    * Called when an error occurs
    */
   onError?: (error: DeepgramError) => void;
+
+  /**
+   * Called when have new audio buffer
+   */
+  onAgentAudioUpdate?: (data: ArrayBuffer) => void;
   
   /**
    * Enable verbose logging

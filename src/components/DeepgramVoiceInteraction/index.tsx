@@ -68,6 +68,7 @@ function DeepgramVoiceInteraction(
     endpointConfig,
     onReady,
     onConnectionStateChange,
+    onAgentAudioUpdate,
     onTranscriptUpdate,
     onAgentStateChange,
     onAgentUtterance,
@@ -632,6 +633,8 @@ function DeepgramVoiceInteraction(
     } else {
       log('Cannot queue audio: audioManagerRef.current is null');
     }
+
+    if (onAgentAudioUpdate) onAgentAudioUpdate(data);
   };
 
   // Send audio data to WebSockets - conditionally route based on configuration
